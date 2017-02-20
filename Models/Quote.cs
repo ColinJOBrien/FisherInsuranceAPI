@@ -1,6 +1,6 @@
 using System; 
 
-namespace FisherInsurance.Models {       
+namespace FisherInsuranceApi.Models {       
      public class Quote     {      
          public int Id { get; set; }     
 
