@@ -7,7 +7,7 @@ import {Component} from "@angular/core";
 
 @Component({     
     selector: "fisher-insurance",    
-    template: `<root>`
+    template: './app.component.html'
 }) 
 
 @Component({     
