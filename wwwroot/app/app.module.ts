@@ -5,14 +5,14 @@ import 'rxjs/Rx';
 
 // import our application component 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { NavBarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './Components/Home/home.component';
+import { navbarComponent } from './Components/navbar/navbar.component';
 
 @NgModule({     
     declarations: [         
         AppComponent,         
         HomeComponent,
-        NavBarComponent
+        navbarComponent
     ],     
     
     imports: [         
