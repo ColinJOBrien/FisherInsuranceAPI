@@ -56,9 +56,15 @@ namespace FisherInsuranceApi.Controllers
 
 
             [HttpDelete("{id}")] 
-            public IActionResult Delete([FromBody] Quote quote) 
+            public IActionResult Delete(int id) 
                 {          
-                    return Ok();
+                    var quoteToDelete = db.Quotes.Find(id);             
+                    if (quoteToDelete == null) {                 
+                        return NotFound();             
+                    }             
+                    db.Quotes.Remove(quoteToDelete);             
+                    db.SaveChangesAsync();             
+                    return NoContent(); 
                 } 
     } 
 }
