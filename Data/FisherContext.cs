@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore; 
 using FisherInsuranceApi.Models; 
-namespace FisherInsuranceApi.Data {     
-    public class FisherContext : DbContext      
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+namespace FisherInsuranceApi.Data {
+    public class FisherContext : IdentityDbContext<ApplicationUser>       
     {     
                 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {             
                     string connection = "User ID=postgres;Password=godisgreat2;Host=localhost;Port=5432;Database=FisherInsuranceDB;Pooling=true;";
